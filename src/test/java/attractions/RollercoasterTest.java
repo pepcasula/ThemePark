@@ -4,17 +4,20 @@ import org.junit.Before;
 import org.junit.Test;
 import people.Visitor;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class RollercoasterTest {
 
     RollerCoaster rollerCoaster;
     Visitor visitor;
+    ArrayList<Attraction> visitedAttractions;
 
     @Before
     public void setUp() {
         rollerCoaster = new RollerCoaster("Blue Ridge", 10);
-        visitor = new Visitor(31, 199.00, 62.40);
+        visitor = new Visitor(31, 199.00, 62.40, visitedAttractions);
     }
 
     @Test

@@ -4,16 +4,19 @@ import org.junit.Before;
 import org.junit.Test;
 import people.Visitor;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class PlaygroundTest {
     Playground playground;
     Visitor visitor;
+    ArrayList<Attraction> visitedAttractions;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         playground = new Playground("Fun Zone", 7);
-        visitor = new Visitor(16, 162.00, 35.00);
+        visitor = new Visitor(16, 162.00, 35.00, visitedAttractions);
     }
 
     @Test

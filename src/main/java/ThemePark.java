@@ -37,9 +37,17 @@ public class ThemePark {
         this.iceCreamStall = iceCreamStall;
         this.tobaccoStall = tobaccoStall;
     }
-
     public ArrayList<IReviewed> getAllReviewed(){
-        ArrayList<IReviewed> reviews = new ArrayList<>();
-        reviews.add(this.dodgem.)
+        ArrayList<IReviewed> allVenues = new ArrayList<>();
+        allVenues.add(this.dodgems);
+        allVenues.add(this.park);
+        allVenues.add(this.playground);
+        allVenues.add(this.rollerCoaster);
+        allVenues.add(this.candyflossStall);
+        allVenues.add(this.iceCreamStall);
+        allVenues.add(this.tobaccoStall);
+        return allVenues;
     }
+
+
 }

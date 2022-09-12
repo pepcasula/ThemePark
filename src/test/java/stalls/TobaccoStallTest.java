@@ -1,8 +1,11 @@
 package stalls;
 
+import attractions.Attraction;
 import org.junit.Before;
 import org.junit.Test;
 import people.Visitor;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,11 +13,12 @@ public class TobaccoStallTest {
 
     TobaccoStall tobaccoStall;
     Visitor visitor;
+    ArrayList<Attraction> visitedAttractions;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         tobaccoStall = new TobaccoStall("Jacks Drum", "Jack Jarvis", ParkingSpot.B1, 3);
-        visitor = new Visitor(23, 187.00, 236.50);
+        visitor = new Visitor(23, 187.00, 236.50, visitedAttractions);
     }
 
     @Test
